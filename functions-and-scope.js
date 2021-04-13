@@ -76,7 +76,11 @@ console.log(outcome3);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
-
+//Declareer variable sumGrades om de uitkomst in op te slaan
+//Maak een loop die door de array loopt
+//Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
+//Declareer een variable averageGrade en bereken daar het gemiddelde door de formule sumGrades / array.length toe te passen
+//Log de uitkomst in de console
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
