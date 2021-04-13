@@ -81,6 +81,12 @@ console.log(outcome3);
 //Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
 //Declareer een variable averageGrade en bereken daar het gemiddelde door de formule sumGrades / array.length toe te passen
 //Log de uitkomst in de console
+let sumGrades = 0;
+for(i=0; i < grades.length; i++) {
+    sumGrades = sumGrades + grades[i];
+}
+const averageGrade = sumGrades / grades.length;
+console.log(averageGrade);
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
