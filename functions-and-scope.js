@@ -163,8 +163,23 @@ console.log(highestGrade);
 //Wanneer de waarde groter is dan de huidige, wijs deze toe aan de variabele highestgrade
 //Geef de uitkomst van de veriable highestgrade terug
 //Log de waarde van highestgrade in de console
+const calculateHighestGrade = (gradesArray) => {
+    let highestGrade = 0;
+    for(i=0; i < gradesArray.length; i++) {
+        if(gradesArray[i] > highestGrade) {
+            highestGrade = gradesArray[i];
+        }
+    }
+    return highestGrade;
+}
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+const outcome7 = calculateHighestGrade(grades);
+console.log(outcome7);
+const outcome8 = calculateHighestGrade([6,4,5]);
+console.log(outcome8);
+const outcome9 = calculateHighestGrade([8,9,4,6,10]);
+console.log(outcome9);
