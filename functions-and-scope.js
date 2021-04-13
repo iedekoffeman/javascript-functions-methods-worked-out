@@ -138,6 +138,11 @@ console.log(outcomeAverageGradeRounded);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+//Declareer variable om de hoogste waarde in op te slaan
+//Loop door de array heen
+//Check elke loop of de waarde groter is dan de waarde die in de variable is opgeslagen
+//Wanneer de waarde hoger is sla deze op
+//Log de waarde van de variable in de console wanneer het einde van de loop bereikt is en alle waardes zijn langsgegaan
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
