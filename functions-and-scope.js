@@ -79,14 +79,13 @@ console.log(outcome3);
 //Declareer variable sumGrades om de uitkomst in op te slaan
 //Maak een loop die door de array loopt
 //Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
-//Declareer een variable averageGrade en bereken daar het gemiddelde door de formule sumGrades / array.length toe te passen
+//Bereken het gemiddelde door de formule sumGrades / array.length toe te passen
 //Log de uitkomst in de console
 let sumGrades = 0;
 for(i=0; i < grades.length; i++) {
     sumGrades = sumGrades + grades[i];
 }
-const averageGrade = sumGrades / grades.length;
-console.log(averageGrade);
+console.log(sumGrades / grades.length);
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -97,12 +96,35 @@ console.log(averageGrade);
 // averageGrade(grades) geeft 6.642857142857143
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
-
-
+//Definieer functie
+//Voeg parameter gradesArray toe
+//Declareer local variable sumGrades
+//Loop door de array heen
+//Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
+//Bereken het gemiddelde door de formule sumGrades / array.length toe te passen
+//Geef de uitkomst terug
+//Log de uitkomst in de console
+const averageGrade = (gradesArray) => {
+    let sumGrades = 0;
+    for(i=0; i < gradesArray.length; i++) {
+        sumGrades = sumGrades + gradesArray[i];
+    }
+    return sumGrades / grades.length;
+}
+const outcome4 = averageGrade(grades);
+console.log(outcome4);
+const outcome5 = averageGrade([6,4,5]);
+console.log(outcome5);
+const outcome6 = averageGrade([8,9,4,5,10]);
+console.log(outcome6);
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
+//Declareer variable
+//Rond uitkomst af op 2 decimalen en wijs dit toe aan de variable
+//Log de waarde van de variable rounded
+const outcomeAverageGradeRounded = Math.round(outcome4 * 100) / 100;
+console.log(outcomeAverageGradeRounded);
 
 
 
