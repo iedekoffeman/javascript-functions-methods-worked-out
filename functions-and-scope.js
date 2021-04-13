@@ -155,6 +155,14 @@ console.log(highestGrade);
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+//Definieer functie
+//Declareer local variable highestGrade
+//Voeg parameter gradesArray toe
+//Maak een loop die door de array loopt
+//Check of elke waarde groter is dan de waarde die in de variable highestgrade is opgeslagen
+//Wanneer de waarde groter is dan de huidige, wijs deze toe aan de variabele highestgrade
+//Geef de uitkomst van de veriable highestgrade terug
+//Log de waarde van highestgrade in de console
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
