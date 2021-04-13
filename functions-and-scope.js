@@ -17,7 +17,8 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // ---- Verwachte uitkomst: 6
 //Declareer variable amountOfStudentsCumLaude die het aantal studenten bijhoudt die een 8 of hoger hebben. Deze begint op 0.
 //Door de array loopen
-//Controleer of elke waarde een 8 of hoger is en tel 1 op bij amountOfStudentsCumLaude
+//Controleer of elke waarde een 8 of hoger is
+//Tel 1 op bij amountOfStudentsCumLaude
 //Log de uitkomst in de console
 
 let amountOfStudentsCumLaude = 0;
@@ -38,12 +39,30 @@ console.log(amountOfStudentsCumLaude);
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
+
 //Definieer functie
-//Voeg parameter toe: grades
-//Loop door de array heen en check of de uitkomst gelijk aan of hoger dan 8 is
+//Declareer local variable amountOfStudentsCumLaude
+//Voeg parameter toe: gradesArray
+//Loop door de array heen
+//Check of de uitkomst gelijk aan of hoger dan 8 is
+//Verhoog amountOfStudentsCumLaude met 1 als dit waar is
+//Geef de waarde van amountOfStudentsCumLaude terug
 //Log de output voor de gebruiker
-
-
+const cumLaude = (gradesArray) => {
+    let amountOfStudentsCumLaude = 0;
+    for(i=0; i < gradesArray.length ; i++){
+        if(gradesArray[i] >= 8) {
+            amountOfStudentsCumLaude = amountOfStudentsCumLaude + 1;
+        }
+    }
+    return amountOfStudentsCumLaude;
+}
+const outcome1 = cumLaude(grades);
+console.log(outcome1);
+const outcome2 = cumLaude([6,4,5]);
+console.log(outcome2);
+const outcome3 = cumLaude([8,9,4,6,10]);
+console.log(outcome3);
 
 
 /* Opdracht  2: Gemiddeld cijfer */
