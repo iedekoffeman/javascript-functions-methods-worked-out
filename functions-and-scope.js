@@ -143,7 +143,13 @@ console.log(outcomeAverageGradeRounded);
 //Check elke loop of de waarde groter is dan de waarde die in de variable is opgeslagen
 //Wanneer de waarde hoger is sla deze op
 //Log de waarde van de variable in de console wanneer het einde van de loop bereikt is en alle waardes zijn langsgegaan
-
+let highestGrade = 0;
+for(i=0; i < grades.length; i++) {
+    if(grades[i] > highestGrade) {
+        highestGrade = grades[i];
+    }
+}
+console.log(highestGrade);
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
