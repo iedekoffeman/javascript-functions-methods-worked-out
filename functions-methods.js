@@ -83,8 +83,15 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 
 const checkEmailValidity = (email) => {
     const hasAtinString = email.includes("@");
+    const hasCommaInString = email.includes(",");
+    let outcome = "";
     if(hasAtinString) {
-        return email + " Bevat een @";
+        outcome += " Bevat een @";
     }
+    if(hasCommaInString) {
+        outcome += " Bevat een ,"
+    }
+    return email + outcome;
 }
 console.log(checkEmailValidity("n.eeken@novi.nl"));
+console.log(checkEmailValidity("tessmellink@novi,nl"));
