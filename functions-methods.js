@@ -8,8 +8,18 @@
 // getEmailDomain("n.eeken@novi-education.nl") geeft novi-education.nl
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
-
-
+//Definieer functie
+//Voeg parameter email toe
+//lees de string en bepaal (deel de string op eigenlijk) wat het domeinnaam is met een string object methode split
+//geef de output (domeinaam) terug
+//log de output in de console
+const getEmailDomain = (email) => {
+    const emailSplit = email.split("@");
+    return emailSplit[1];
+}
+console.log(getEmailDomain("n.eeken@novi-education.nl"));
+console.log(getEmailDomain("t.mellink@novi.nl"));
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 
 /* Opdracht  2 */
