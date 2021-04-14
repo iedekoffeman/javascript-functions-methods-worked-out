@@ -80,3 +80,11 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 //Schrijf een if statement om te kijken of dit waar of niet waar is en geef
 //Geef de uitkomst terug
 //Log de uitkomst in de console
+
+const checkEmailValidity = (email) => {
+    const hasAtinString = email.includes("@");
+    if(hasAtinString) {
+        return email + " Bevat een @";
+    }
+}
+console.log(checkEmailValidity("n.eeken@novi.nl"));
