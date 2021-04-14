@@ -36,7 +36,23 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 //Schrijf een if statement om te kijken of het domeinnaam voldoet aan de voorwaarde
 //Geef het benodigde type terug (Student, medewerker, extern)
 //Log de uitkomst in de console
-
+const typeOfEmail = (email) => {
+    const emailSplit = email.split("@");
+    const domain = emailSplit[1];
+    if(domain === "novi-education.nl") {
+        return domain + " is van type Student";
+    }
+    if(domain === "novi.nl") {
+        return domain + " is van type Medewerker";
+    }
+    if(domain === "outlook.com") {
+        return domain + " is van type Extern";
+    }
+}
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("novi.nlaapjes@outlook.com"));
+console.log(typeOfEmail("a.wiersma@outlook.com"));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
