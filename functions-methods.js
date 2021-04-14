@@ -40,19 +40,19 @@ const typeOfEmail = (email) => {
     const emailSplit = email.split("@");
     const domain = emailSplit[1];
     //If statement refactored naar een switch statement, werkt beide, maar dit ziet er schoner uit.
-    let type = "";
+    let typeDomain = "";
     switch(domain) {
         case "novi-education.nl":
-            type = " is van type student";
+            typeDomain = " is van type student";
             break;
         case "novi.nl":
-            type = " is van type Medewerker";
+            typeDomain = " is van type Medewerker";
             break;
         case "outlook.com":
-            type = " is van type Extern";
+            typeDomain = " is van type Extern";
             break;
     }
-    return domain + type;
+    return domain + typeDomain;
 }
 console.log(typeOfEmail("n.eeken@novi-education.nl"));
 console.log(typeOfEmail("t.mellink@novi.nl"));
