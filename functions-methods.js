@@ -71,3 +71,12 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+//Definieer functie
+//Voeg parameter email toe
+//Controleer of de waarde van het meegegeven email adres een @ bevat
+//Controleer of de waarde van het meegegeven email adres geen , bevat
+//Controleer of er geen . als allerlaatste karakter in voorkomt
+//Schrijf een if statement om te kijken of dit waar of niet waar is en geef
+//Geef de uitkomst terug
+//Log de uitkomst in de console
