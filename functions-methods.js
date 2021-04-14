@@ -30,6 +30,12 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+//Definieer functie
+//Voeg parameter email toe
+//Knip de string op dmv de split methode
+//Schrijf een if statement om te kijken of het domeinnaam voldoet aan de voorwaarde
+//Geef het benodigde type terug (Student, medewerker, extern)
+//Log de uitkomst in de console
 
 
 /* Opdracht  3 */
