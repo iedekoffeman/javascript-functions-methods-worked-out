@@ -12,6 +12,7 @@
 //Voeg parameter email toe
 //lees de string en bepaal (deel de string op eigenlijk) wat het domeinnaam is met een string object methode split
 //geef de output (domeinaam) terug
+//Roep functie aan en geef argument mee
 //log de output in de console
 const getEmailDomain = (email) => {
     const emailSplit = email.split("@");
@@ -35,6 +36,7 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 //Knip de string op dmv de split methode
 //Schrijf een if statement om te kijken of het domeinnaam voldoet aan de voorwaarde
 //Geef het benodigde type terug (Student, medewerker, extern)
+//Roep functie aan en geef argument mee
 //Log de uitkomst in de console
 const typeOfEmail = (email) => {
     const emailSplit = email.split("@");
@@ -77,21 +79,28 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 //Controleer of de waarde van het meegegeven email adres een @ bevat
 //Controleer of de waarde van het meegegeven email adres geen , bevat
 //Controleer of er geen . als allerlaatste karakter in voorkomt
-//Schrijf een if statement om te kijken of dit waar of niet waar is en geef
+//Schrijf een if statement om te kijken of dit waar of niet waar is
 //Geef de uitkomst terug
+//Roep de functie aan en geef argument mee
 //Log de uitkomst in de console
 
 const checkEmailValidity = (email) => {
-    const hasAtinString = email.includes("@");
-    const hasCommaInString = email.includes(",");
-    let outcome = "";
-    if(hasAtinString) {
-        outcome += " Bevat een @";
+    const hasAtInEmail = email.includes("@");
+    const hasCommaInEmail = email.includes(",");
+    const lastCharEmailIsDot = email.charAt(email.length -1) === ".";
+
+    if (hasAtInEmail && !hasCommaInEmail && !lastCharEmailIsDot) {
+        return true + " - want @ en punt op de juiste plek";
+    } else if (!hasAtInEmail) {
+        return false + " - want geen @";
+    } else if (hasCommaInEmail) {
+        return false + " - geeft false want er staat een komma in";
+    } else if (lastCharEmailIsDot) {
+        return false + " - geeft false want de punt mag niet als laatst";
     }
-    if(hasCommaInString) {
-        outcome += " Bevat een ,"
-    }
-    return email + outcome;
 }
 console.log(checkEmailValidity("n.eeken@novi.nl"));
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eekennovi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
 console.log(checkEmailValidity("tessmellink@novi,nl"));
