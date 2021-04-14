@@ -39,15 +39,20 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 const typeOfEmail = (email) => {
     const emailSplit = email.split("@");
     const domain = emailSplit[1];
-    if(domain === "novi-education.nl") {
-        return domain + " is van type Student";
+    //If statement refactored naar een switch statement, werkt beide, maar dit ziet er schoner uit.
+    let type = "";
+    switch(domain) {
+        case "novi-education.nl":
+            type = " is van type student";
+            break;
+        case "novi.nl":
+            type = " is van type Medewerker";
+            break;
+        case "outlook.com":
+            type = " is van type Extern";
+            break;
     }
-    if(domain === "novi.nl") {
-        return domain + " is van type Medewerker";
-    }
-    if(domain === "outlook.com") {
-        return domain + " is van type Extern";
-    }
+    return domain + type;
 }
 console.log(typeOfEmail("n.eeken@novi-education.nl"));
 console.log(typeOfEmail("t.mellink@novi.nl"));
