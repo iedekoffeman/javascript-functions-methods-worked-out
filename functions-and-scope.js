@@ -15,6 +15,19 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+//Declareer variable amountOfStudentsCumLaude die het aantal studenten bijhoudt die een 8 of hoger hebben. Deze begint op 0.
+//Door de array loopen
+//Controleer of elke waarde een 8 of hoger is
+//Tel 1 op bij amountOfStudentsCumLaude
+//Log de uitkomst in de console
+
+let amountOfStudentsCumLaude = 0;
+for(i=0; i < grades.length ; i++){
+    if(grades[i] >= 8) {
+        amountOfStudentsCumLaude = amountOfStudentsCumLaude + 1;
+    }
+}
+console.log(amountOfStudentsCumLaude);
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -27,7 +40,29 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-
+//Definieer functie
+//Declareer local variable amountOfStudentsCumLaude
+//Voeg parameter toe: gradesArray
+//Loop door de array heen
+//Check of de uitkomst gelijk aan of hoger dan 8 is
+//Verhoog amountOfStudentsCumLaude met 1 als dit waar is
+//Geef de waarde van amountOfStudentsCumLaude terug
+//Log de output voor de gebruiker
+const cumLaude = (gradesArray) => {
+    let amountOfStudentsCumLaude = 0;
+    for(i=0; i < gradesArray.length ; i++){
+        if(gradesArray[i] >= 8) {
+            amountOfStudentsCumLaude = amountOfStudentsCumLaude + 1;
+        }
+    }
+    return amountOfStudentsCumLaude;
+}
+const outcome1 = cumLaude(grades);
+console.log(outcome1);
+const outcome2 = cumLaude([6,4,5]);
+console.log(outcome2);
+const outcome3 = cumLaude([8,9,4,6,10]);
+console.log(outcome3);
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -41,7 +76,16 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
-
+//Declareer variable sumGrades om de uitkomst in op te slaan
+//Maak een loop die door de array loopt
+//Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
+//Bereken het gemiddelde door de formule sumGrades / array.length toe te passen
+//Log de uitkomst in de console
+let sumGrades = 0;
+for(i=0; i < grades.length; i++) {
+    sumGrades = sumGrades + grades[i];
+}
+console.log(sumGrades / grades.length);
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -52,12 +96,35 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // averageGrade(grades) geeft 6.642857142857143
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
-
-
+//Definieer functie
+//Voeg parameter gradesArray toe
+//Declareer local variable sumGrades
+//Loop door de array heen
+//Bij elke loop sla het cijfer op in de sumGrades door deze erbij op te tellen
+//Bereken het gemiddelde door de formule sumGrades / array.length toe te passen
+//Geef de uitkomst terug
+//Log de uitkomst in de console
+const averageGrade = (gradesArray) => {
+    let sumGrades = 0;
+    for(i=0; i < gradesArray.length; i++) {
+        sumGrades = sumGrades + gradesArray[i];
+    }
+    return sumGrades / grades.length;
+}
+const outcome4 = averageGrade(grades);
+console.log(outcome4);
+const outcome5 = averageGrade([6,4,5]);
+console.log(outcome5);
+const outcome6 = averageGrade([8,9,4,5,10]);
+console.log(outcome6);
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
+//Declareer variable
+//Rond uitkomst af op 2 decimalen en wijs dit toe aan de variable
+//Log de waarde van de variable rounded
+const outcomeAverageGradeRounded = Math.round(outcome4 * 100) / 100;
+console.log(outcomeAverageGradeRounded);
 
 
 
@@ -71,14 +138,48 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
-
+//Declareer variable om de hoogste waarde in op te slaan
+//Loop door de array heen
+//Check elke loop of de waarde groter is dan de waarde die in de variable is opgeslagen
+//Wanneer de waarde hoger is sla deze op
+//Log de waarde van de variable in de console wanneer het einde van de loop bereikt is en alle waardes zijn langsgegaan
+let highestGrade = 0;
+for(i=0; i < grades.length; i++) {
+    if(grades[i] > highestGrade) {
+        highestGrade = grades[i];
+    }
+}
+console.log(highestGrade);
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+//Definieer functie
+//Declareer local variable highestGrade
+//Voeg parameter gradesArray toe
+//Maak een loop die door de array loopt
+//Check of elke waarde groter is dan de waarde die in de variable highestgrade is opgeslagen
+//Wanneer de waarde groter is dan de huidige, wijs deze toe aan de variabele highestgrade
+//Geef de uitkomst van de veriable highestgrade terug
+//Log de waarde van highestgrade in de console
+const calculateHighestGrade = (gradesArray) => {
+    let highestGrade = 0;
+    for(i=0; i < gradesArray.length; i++) {
+        if(gradesArray[i] > highestGrade) {
+            highestGrade = gradesArray[i];
+        }
+    }
+    return highestGrade;
+}
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+const outcome7 = calculateHighestGrade(grades);
+console.log(outcome7);
+const outcome8 = calculateHighestGrade([6,4,5]);
+console.log(outcome8);
+const outcome9 = calculateHighestGrade([8,9,4,6,10]);
+console.log(outcome9);
